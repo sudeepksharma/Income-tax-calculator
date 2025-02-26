@@ -1,18 +1,34 @@
 import java.util.*;
 
 public class JavaBasics {
-    public static void main(String args[]) {
+    public static void main(String[] agrs) {
         Scanner sc = new Scanner(System.in);
-        int income = sc.nextInt();
-        int tax;
-        if (income < 500000) {
-            tax = 0;
-        } else if (income >= 500000 && income < 1000000) {
-            tax = (int) (income * 0.2);
-        } else {
-            tax = (int) (income * 0.3);
-        }
+        System.out.println("Enter a:");
+        int a = sc.nextInt();
+        System.out.println("Enter b:");
+        int b = sc.nextInt();
+        System.out.println("Enter operator:");
+        char operator = sc.next().charAt(0);
 
-        System.out.println("Your tax is:"+ tax);
+        switch(operator) {
+            case '+':
+                System.out.println(a + b);
+                break;
+            case '-':
+                System.out.println(a - b);
+                break;
+            case '*':
+                System.out.println(a * b);
+                break;
+            case '/':
+                System.out.println(a / b);
+                break;
+            case '%':
+                System.out.println(a % b);
+                break;
+            default:
+                System.out.println("Invalid Operator");        
+        }
     }
+
 }
